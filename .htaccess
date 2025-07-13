@@ -1,0 +1,4 @@
+RewriteEngine  on
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^ https://www.milleats.com%{REQUEST_URI} [R=301,L,NE]
